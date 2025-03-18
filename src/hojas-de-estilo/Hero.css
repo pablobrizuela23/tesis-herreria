@@ -1,0 +1,25 @@
+.hero-section {
+    width: 100vw;
+}
+.hero-contenido {
+    text-align: center;
+    padding: 127px 0px 0px 0px;
+    background: url("../imagenes/soldador.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 769px;
+    width: 100%;
+    color: white;
+}
+
+.hero-contenido h1 {
+   
+    font-size: 75px;
+    font-weight: 600;
+}
+
+.hero-contenido p {
+    font-size: 18px;
+    font-weight: 600;
+    
+}
