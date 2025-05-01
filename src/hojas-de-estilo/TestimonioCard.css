@@ -1,0 +1,9 @@
+.card-contenedor .card {
+    max-width: 100%; /* Que se expanda en la columna */
+    min-height: 350px; /* Asegura altura uniforme */
+  }
+  .card-img-top {
+    height: 300px; /* Ajusta altura de la imagen */
+    object-fit: cover; /* Evita que se distorsione */
+  }
+  

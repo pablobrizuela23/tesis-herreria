@@ -1,0 +1,26 @@
+.carrusel-contenedor-principal {
+    margin: 50px;
+    
+}
+.carrusel-contenedor-principal h3{
+    text-align: center;
+    margin: 60px;
+    font-size: 4rem;
+}
+.carrusel-contenedor-principal p{
+    font-size: 17px; 
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;  
+}
+.carrusel-contenedor {
+    max-width: 80vw;  /* Ajusta el ancho */
+    max-height: 80vh; /* Ajusta la altura */
+    margin: auto; /* Centra el carrusel */
+    overflow: hidden;
+}
+
+.carrusel-contenedor img{
+    object-fit: cover; /* Ajusta la imagen dentro del carrusel */
+    height: 100%;
+}

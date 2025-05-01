@@ -1,0 +1,27 @@
+.servicio-contenedor{
+    margin-top: 50px;
+}
+.servicio-contenedor h3{
+    color: #000000;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.servicio-contenedor p{
+    font-size: 17px;
+    font-weight: 500;  
+    line-height: 30px;
+    color: #2e2f2f;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.servicio-contenedor i {
+    float: left;
+    padding-right: 20px;
+    height: 125px;
+}
+

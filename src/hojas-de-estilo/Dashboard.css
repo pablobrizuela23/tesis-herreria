@@ -1,0 +1,24 @@
+.dashboard-container {
+    display: flex;
+  }
+  
+  .content {
+    margin-left: 250px; /* Para no tapar el sidebar */
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    background: url("../imagenes/logo-final.jpg");
+    background-repeat: no-repeat;
+    background-position: center; /* Fondo claro estilo Bootstrap */
+  }
+  
+
+  /* 🔹 RESPONSIVE: Cuando el sidebar se convierte en menú arriba */
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding-top: 50px; /* Deja espacio para el menú arriba */
+        background-size: cover; /* Ajusta la imagen en móviles */
+    }
+}

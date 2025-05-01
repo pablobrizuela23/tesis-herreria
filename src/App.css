@@ -1,0 +1,32 @@
+/* global.css */
+/*fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@300;400&family=Poppins:wght@500;600&display=swap');
+
+
+
+:root {
+    --primary-color: #ff6600; /* Naranja */
+    --secondary-color: #333333; /* Gris oscuro */
+    --background-color: #f5f5f5; /* Gris claro */
+    --text-color: #ffffff; /* Blanco */
+  }
+
+
+  html,body{
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  } 
+
+h4, h5, h6, .subtitulo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+p, span {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+  

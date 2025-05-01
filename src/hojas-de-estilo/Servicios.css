@@ -1,0 +1,15 @@
+.servicio{
+    padding: 90px 0px 0px;
+}
+
+.servicio-titulo h2 {
+    font-size: 2.5rem;
+    
+}
+
+.servicio p{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #2e2f2f;
+}

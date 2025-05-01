@@ -1,3 +1,19 @@
 .navbar{
-    font-size: 18px;
+    font-size: 19px;
+    background-color: black;
+    color: white;
+}
+.nav-link{
+    color: white;
+}
+
+.img-contenedor {
+    width: 200px;
+    
+}
+img{
+    width: 100%;  /* Ajusta el tamaño según lo que necesites */
+    height: 100%; /* El mismo tamaño que el ancho para mantenerlo cuadrado */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  
 }

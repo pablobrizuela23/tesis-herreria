@@ -1,15 +1,24 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      // Aquí iría la lógica para el inicio de sesión, como la validación del usuario.
-      console.log('Email:', email);
-      console.log('Password:', password);
+      console.log(email);
+      console.log(password);
+      
+      if(email=== "admin@herreria.com" && password === "1234"){
+          console.log(" Ingreso exitoso ");
+          navigate("/dashboard");
+        
+        }else{
+          alert("credenciales incorrectas");
+        }
     };
 
   return (
