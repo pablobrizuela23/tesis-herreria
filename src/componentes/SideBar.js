@@ -8,6 +8,8 @@ export default function SideBar() {
       <h3>ADMINISTRACION</h3>
       <Link to="/clientes">CLIENTES</Link>
       <Link to="/proveedores">PROVEEDORES</Link>
+      <Link to="/index-turnos">TURNOS</Link>
+      <Link to="/crear-usuario">CREAR USUARIO</Link>
     </div>
   )
 }

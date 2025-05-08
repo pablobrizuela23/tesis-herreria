@@ -24,3 +24,24 @@
     object-fit: cover; /* Ajusta la imagen dentro del carrusel */
     height: 100%;
 }
+
+.boton-contenedor-proyecto{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.btn-proyecto{
+    padding: 20px 50px 20px 50px;
+}
+.btn-link{
+    color: white;
+    text-decoration: none;
+}
+.btn :hover{
+    color: white;
+}
+

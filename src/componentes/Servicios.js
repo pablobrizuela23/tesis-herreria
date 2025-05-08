@@ -20,18 +20,18 @@ export default function Servicios() {
                </div>
         </div>
         <CardServicios
-        titulo={"Automatizacion de portones"}
-        descripcion={"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."}
+        titulo={"Automatizacion"}
+        descripcion={"Realizamos automatizaciones en diferentes tipos de aberturas, corredizos, batientes y levadizos."}
         imagen={Icono}/>
 
         <CardServicios 
-        titulo={"Fabricación de portones metálicos"}
-        descripcion={"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."}
+        titulo={"Herrería"}
+        descripcion={"Prestamos un servicio de primera categoría, analizando las necesidades de los clientes, realizando rejas perimetrales, de aberturas, escaleras, y todo lo referido a herrería."}
         imagen={Icono2}/>
 
         <CardServicios 
-        titulo={"Instalación de rejas de seguridad"}
-        descripcion={"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."}
+        titulo={"Mantenimiento y reparación"}
+        descripcion={"Tenemos gran variedad de repuestos para motores automáticos, también se realizan reparaciones y mantenimientos en diferentes equipos, lo que prolonga su vida útil."}
         imagen={Icono3}/>
 
         <CardServicios 

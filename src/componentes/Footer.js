@@ -16,8 +16,8 @@ export default function Footer() {
                 <h4>Contacto</h4>
                 <ul class="contacto-lista">
                     <li><i class="fas fa-map-marker-alt"></i> Dirección: Calle Falsa 123</li>
-                    <li><i class="fas fa-phone"></i> Teléfono: +54 9 11 1234-5678</li>
-                    <li><i class="fas fa-envelope"></i> Email: contacto@herreria.com</li>
+                    <li><i class="fas fa-phone"></i> Teléfono: +54 9 3549 63-9639</li>
+                    <li><i class="fas fa-envelope"></i> Email: herrecor.contacto@gmail.com</li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; 2024 Herrería Artesanal | Todos los derechos reservados.</p>
+            <p>&copy; 2025 HERRECOR | Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
