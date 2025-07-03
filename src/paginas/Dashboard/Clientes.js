@@ -1,13 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Await, Link } from 'react-router-dom';
 import "../../hojas-de-estilo/Cliente.css";
+import axios from 'axios';
 
 export default function Clientes() {
+
+  const urlBase = "http://localhost:8080/herrecor-app/clientes";
+
+  const [clientes, setClientes] = useState([]);
+
+  //cuando se carga la pagina se ejecuta este hook
+  useEffect(() => {
+    //este metodo se comunica con el backend
+    cargarClientes();
+  }, []);
+//arreglo vacio para llamar solo una vez
+
+  const cargarClientes = async () => {
+    const resultado = await axios.get(urlBase);
+    console.log("Resultado de cargar clientes");
+    console.log(resultado.data);
+    setClientes(resultado.data);
+  }
   return (
     <div className='container-fluid min-vh-100'>
         <div className='encabezado-contenedor d-flex align-items-center justify-content-between '>
-          <Link to="#">
-            <button type="button" class="btn btn-primary">Volver
+          <Link to="/crear-cliente">
+            <button type="button" class="btn btn-success">AGREGAR
             </button>
           </Link>
           <h2 className='text-center flex-grow-1 m-0'>GESTION DE CLIENTES</h2>
@@ -21,61 +40,39 @@ export default function Clientes() {
                   <th scope="col">Nombre</th>
                   <th scope="col">Apellido</th>
                   <th scope="col">Telefono</th>
+                  <th scope="col">Direccion</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mauricio</td>
-                  <td>Gonzalez</td>
-                  <td>3549-896514</td>
-                  <td>
-                    <div className='text-center'>
-                      <Link to="#"
-                        className='btn btn-warning btn-sm me-3'>EDITAR</Link>
+                {
+                //iteramos el arreglo de clientes
+                clientes.map((cliente,indice) => (
+                    <tr key={indice}>
+                      <th scope="row">{cliente.id}</th>
+                      <td>{cliente.nombre}</td>
+                      <td>{cliente.apellido}</td>
+                      <td>{cliente.telefono}</td>
+                      <td>{cliente.direccion}</td>
+                      <td>
+                        <div className='text-center'>
+                          
+                          <Link 
+                            to={`/editar/${cliente.id}`}
+                            className='btn btn-warning btn-sm me-3'>
+                              EDITAR
+                          </Link>
 
-                      <button 
-                        onClick=""
-                        className='btn btn-danger btn-sm'
-                        >Eliminar</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jorge</td>
-                  <td>Torres</td>
-                  <td>3549-658788</td>
-                  <td>
-                    <div className='text-center'>
-                      <Link to="#"
-                        className='btn btn-warning btn-sm me-3'>EDITAR</Link>
-
-                      <button 
-                        onClick=""
-                        className='btn btn-danger btn-sm'
-                        >Eliminar</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Laura</td>
-                  <td>Morales</td>
-                  <td>3549-457899</td>
-                  <td>
-                    <div className='text-center'>
-                      <Link to="#"
-                        className='btn btn-warning btn-sm me-3'>EDITAR</Link>
-
-                      <button 
-                        onClick=""
-                        className='btn btn-danger btn-sm'
-                        >Eliminar</button>
-                    </div>
-                  </td>
-                </tr>
+                          <button 
+                            onClick=""
+                            className='btn btn-danger btn-sm'
+                            >Eliminar</button>
+                        </div>
+                      </td>
+                    </tr>
+                    ))
+                
+                    }
                 
               </tbody>
           </table>

@@ -9,6 +9,8 @@ import Proveedores from '../paginas/Dashboard/Proveedores';
 import SacarTurnos from '../paginas/turnos/SacarTurnos';
 import Index from '../paginas/turnos/Index';
 import CrearUsuario from '../paginas/Dashboard/CrearUsuario';
+import CrearCliente from '../paginas/Dashboard/CrearCliente';
+import EditarCliente from '../paginas/Dashboard/EditarCliente';
 
 
 
@@ -25,6 +27,8 @@ export default function AppRouter() {
             <Route path='proveedores' element={<Proveedores />} />
             <Route path='index-turnos' element={<Index />} />
             <Route path='crear-usuario' element={<CrearUsuario />} />
+            <Route path='crear-cliente' element={<CrearCliente/>} />
+            <Route path='/editar/:id' element={<EditarCliente/>} />
         </Routes>
     </BrowserRouter>
   )
