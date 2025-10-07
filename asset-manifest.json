@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tesis-herreria/static/css/main.f382acbb.css",
-    "main.js": "/tesis-herreria/static/js/main.e4a4751c.js",
+    "main.js": "/tesis-herreria/static/js/main.82a36d46.js",
     "static/media/puertas-asador.jpg": "/tesis-herreria/static/media/puertas-asador.3b9c397b8dec5aa8eea3.jpg",
     "static/media/background-dashboard.jpg": "/tesis-herreria/static/media/background-dashboard.bf9e66c39ec1dd655ffd.jpg",
     "static/media/background-seccion-acerca.jpg": "/tesis-herreria/static/media/background-seccion-acerca.03f27e0487dd00baacc3.jpg",
@@ -17,10 +17,10 @@
     "static/media/icono2.png": "/tesis-herreria/static/media/icono2.f65b8221341e4ca44a2d.png",
     "index.html": "/tesis-herreria/index.html",
     "main.f382acbb.css.map": "/tesis-herreria/static/css/main.f382acbb.css.map",
-    "main.e4a4751c.js.map": "/tesis-herreria/static/js/main.e4a4751c.js.map"
+    "main.82a36d46.js.map": "/tesis-herreria/static/js/main.82a36d46.js.map"
   },
   "entrypoints": [
     "static/css/main.f382acbb.css",
-    "static/js/main.e4a4751c.js"
+    "static/js/main.82a36d46.js"
   ]
 }
