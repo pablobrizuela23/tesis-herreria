@@ -1,24 +1,54 @@
-.dashboard-container {
-    display: flex;
-  }
-  
-  .content {
-    margin-left: 250px; /* Para no tapar el sidebar */
-    padding: 20px;
-    width: 100%;
-    min-height: 100vh;
-    background: url("../imagenes/background-dashboard.jpg");
-    background-repeat: no-repeat;
-    background-position: center; /* Fondo claro estilo Bootstrap */
-  }
-  
-
-  /* 🔹 RESPONSIVE: Cuando el sidebar se convierte en menú arriba */
-@media (max-width: 768px) {
-    .content {
-        margin-left: 0;
-        width: 100%;
-        padding-top: 50px; /* Deja espacio para el menú arriba */
-        background-size: cover; /* Ajusta la imagen en móviles */
-    }
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
 }
+
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 30px;
+  z-index: 2000;
+  background: none;
+  border: none;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+/* Contenido */
+.content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 20px;
+  background: url("../imagenes/background-dashboard.jpg") no-repeat center/cover;
+  min-height: 100vh;
+  transition: filter 0.3s;
+}
+
+.content.blur {
+  filter: blur(2px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+  .content {
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

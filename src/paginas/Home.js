@@ -10,32 +10,18 @@ import Footer from '../componentes/Footer'
 
 export default function Home() {
 
-  const serviciosRef = useRef(null);
-  const acercaRef = useRef(null);
-  const proyectosRef = useRef(null);
-  const testimoniosRef = useRef(null);
-  const contactoRef = useRef(null);
 
-  const scrollToSection = (ref) => {
-    ref.current.scrollIntoView({behavior: "smooth"});
-  };
+  
 
   return (
     <>
-      <NavBar 
-      scrollToSection={scrollToSection}
-      serviciosRef={serviciosRef}
-      acercaRef={acercaRef}
-      proyectosRef={proyectosRef}
-      testimoniosRef={testimoniosRef}
-      contactoRef={contactoRef}
-      />
-      <Hero/>
-      <Servicios ref={serviciosRef}/>
-      <AcercaDeNosotros ref={acercaRef}/>
-      <Proyectos ref={proyectosRef}/>
-      <Testimonios ref={testimoniosRef}/>
-      <Contacto ref={contactoRef}/>
+      <NavBar />
+      <Hero />
+      <Servicios />
+      <AcercaDeNosotros />
+      <Proyectos />
+      <Testimonios/>
+      <Contacto />
       <Footer />
     </>
   )

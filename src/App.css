@@ -29,4 +29,11 @@ p, span {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 }
+
+section {
+  scroll-margin-top: 70px; /* espacio que deja el navbar al hacer scroll */
+}
+
+
+
   

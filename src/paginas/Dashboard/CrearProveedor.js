@@ -1,46 +1,30 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import 'react-calendar/dist/Calendar.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-
-
-
-export default function EditarCliente() {
-    const urlBase = `${process.env.REACT_APP_BACKEND_URL}/clientes`;
-
+export default function CrearProveedor() {
     let navegacion = useNavigate();
 
-    const {id} = useParams();
-
-    const [cliente, setCliente]=useState({
+    const [proveedor, setProveedor]=useState({
         nombre:"",
         apellido:"",
         telefono:"",
         direccion:""
     })
     
-    const{nombre,apellido,telefono,direccion} = cliente
-
-    useEffect(()=>{
-        cargarCliente();
-    },[])
-
-    const cargarCliente = async () => {
-        const resultado = await axios.get(`${urlBase}/${id}`)
-        setCliente(resultado.data);
-    }
+    const{nombre,apellido,telefono,direccion} = proveedor
 
     const onInputChange = (e) => {
-        setCliente({...cliente,[e.target.name]: e.target.value})    
+        setProveedor({...proveedor,[e.target.name]: e.target.value})    
     }
 
     const onSubmit = async (e) =>{
         e.preventDefault();
-        
-        await axios.put(`${urlBase}/${id}`, cliente);
+        const urlBase = `${process.env.REACT_APP_BACKEND_URL}/proveedor`;
+        await axios.post(urlBase,proveedor);
         //redirigimos a la pagina de inicio
-        navegacion('/clientes');
+        navegacion('/proveedores');
 
     }
 
@@ -50,7 +34,7 @@ export default function EditarCliente() {
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title text-center mb-4">EDITAR CLIENTE</h5>
+              <h5 className="card-title text-center mb-4">NUEVO PROVEEDOR</h5>
               <form onSubmit={(e)=> onSubmit(e)}>
                 <div className="mb-3">
                   <label htmlFor="nombre" className="form-label">
@@ -98,10 +82,8 @@ export default function EditarCliente() {
                     onChange={(e)=> onInputChange(e)}
                     required
                   />
-                  
-                </div>
 
-                <div className="mb-3">
+                  <div className="mb-3">
                   <label htmlFor="direccion" className="form-label">
                     Direccion
                   </label>
@@ -116,10 +98,11 @@ export default function EditarCliente() {
                     required
                   />
                 </div>
-
-                
+                  
+                </div>
+              
                 <button type="submit" className="btn btn-primary w-100">
-                  GUARDAR
+                  Crear proveedor
                 </button>
               </form>
             </div>

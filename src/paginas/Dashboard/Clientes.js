@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export default function Clientes() {
 
-  const urlBase = "http://localhost:8080/herrecor-app/clientes";
+  const urlBase = `${process.env.REACT_APP_BACKEND_URL}/clientes`;
 
   const [clientes, setClientes] = useState([]);
 
@@ -22,6 +22,12 @@ export default function Clientes() {
     console.log(resultado.data);
     setClientes(resultado.data);
   }
+
+  const eliminarCliente = async (id)=> {
+    await axios.delete(`${urlBase}/${id}`);
+    cargarClientes();
+  }
+
   return (
     <div className='container-fluid min-vh-100'>
         <div className='encabezado-contenedor d-flex align-items-center justify-content-between '>
@@ -64,7 +70,7 @@ export default function Clientes() {
                           </Link>
 
                           <button 
-                            onClick=""
+                            onClick={()=>eliminarCliente(cliente.id)}
                             className='btn btn-danger btn-sm'
                             >Eliminar</button>
                         </div>

@@ -24,7 +24,7 @@ export default function CrearCliente() {
 
     const onSubmit = async (e) =>{
         e.preventDefault();
-        const urlBase = "http://localhost:8080/herrecor-app/clientes"
+        const urlBase = `${process.env.REACT_APP_BACKEND_URL}/clientes`;
         await axios.post(urlBase,cliente);
         //redirigimos a la pagina de inicio
         navegacion('/clientes');
@@ -73,7 +73,7 @@ export default function CrearCliente() {
                 
                 <div className="mb-3">
                   <label htmlFor="telefono" className="form-label">
-                    Telefono
+                    Teléfono
                   </label>
                   <input
                     type="tel"
@@ -90,7 +90,7 @@ export default function CrearCliente() {
 
                 <div className="mb-3">
                   <label htmlFor="direccion" className="form-label">
-                    Direccion
+                    Dirección
                   </label>
                   <input
                     type="text"

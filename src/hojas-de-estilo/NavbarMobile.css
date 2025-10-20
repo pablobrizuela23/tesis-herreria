@@ -1,0 +1,73 @@
+/* Oculto en desktop */
+@media(min-width: 769px){
+  .navbar-mobile { display: none; }
+}
+
+/* Navbar visible en mobile */
+.navbar-mobile {
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Animación hamburguesa */
+.bar.open:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.bar.open:nth-child(2) { opacity: 0; }
+.bar.open:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+.mobile-links {
+  display: none;
+  flex-direction: column;
+  background-color: #343a40;
+}
+
+.mobile-links.show {
+  display: flex;
+}
+
+.mobile-links a {
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  border-top: 1px solid #495057;
+  transition: 0.2s;
+}
+
+.mobile-links a:hover {
+  background-color: #495057;
+}

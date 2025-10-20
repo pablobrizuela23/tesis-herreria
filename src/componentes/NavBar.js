@@ -1,44 +1,57 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../hojas-de-estilo/NavBar.css";
-import logo from "../imagenes/logo.jpg"
+import logo from "../imagenes/logo.jpg";
+
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
-    
-        <nav className="navbar navbar-expand-lg navbar-dark ">
-  <div className="container-fluid ">
-    <div className='img-contenedor'>
-      <img src={logo} alt='logo'/> 
-    </div>
-    
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div className="container-fluid">
+        {/* Logo */}
+        <Link className="navbar-brand" to="/">
+          <div className="img-contenedor">
+            <img src={logo} alt="logo" />
+          </div>
+        </Link>
+
+        {/* Botón toggle para móvil */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleMenu}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Menú */}
+        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-            <Link className="nav-link active" aria-current="page" to="#home">Home</Link>
+              <a className="nav-link" href="#home" onClick={() => setIsOpen(false)}>Home</a>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="#servicio">Servicios</Link>
+              <a className="nav-link" href="#servicio" onClick={() => setIsOpen(false)}>Servicios</a>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="#">Proyectos</Link>
+              <a className="nav-link" href="#proyectos" onClick={() => setIsOpen(false)}>Proyectos</a>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="#">Testimonios</Link>
+              <a className="nav-link" href="#testimonios" onClick={() => setIsOpen(false)}>Testimonios</a>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to="/Contacto">Contacto</Link>
+              <Link className="nav-link fw-bold" to="/login" onClick={() => setIsOpen(false)}>
+                Administración
+              </Link>
             </li>
-            <li className="nav-item">
-            <Link className="nav-link" to="/login"><strong>Administracion</strong> </Link>
-            </li>
-        </ul>
-      
-    </div>
-  </div>
-</nav>    
-    
-  )
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
 }
+
+

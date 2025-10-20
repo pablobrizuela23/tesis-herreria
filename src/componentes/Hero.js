@@ -10,8 +10,8 @@ export default function Hero() {
         <h1 ><span className='texto-color'> BIENVENIDOS A<br/>HERRECOR</span></h1>
         <p>Diseño, fabricación y automatización de estructuras metálicas con excelencia y precisión</p>
         <div className='boton-contenedor'>
-          <button className='btn btn-hero'>ACERCA DE NOSOTROS</button>
-          <button className='btn btn-hero'>CONTACTANOS</button>
+          <a className='btn btn-hero' href='#acercade'>ACERCA DE NOSOTROS</a>
+          <a className='btn btn-hero' href='#contacto'>CONTACTANOS</a>
         </div>
         
       </div>  

@@ -1,19 +1,52 @@
-.navbar{
-    font-size: 19px;
-    background-color: black;
-    color: white;
-}
-.nav-link{
-    color: white;
+/* Navbar general */
+.navbar {
+  background-color: black;
+  padding: 0.5rem 1rem;
+  font-size: 19px;
 }
 
-.img-contenedor {
-    width: 100px;
-    
+/* Links */
+.nav-link {
+  color: white;
+  transition: color 0.3s;
 }
-img{
-    width: 100%;  /* Ajusta el tamaño según lo que necesites */
-    height: 100%; /* El mismo tamaño que el ancho para mantenerlo cuadrado */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-  
+
+.nav-link:hover {
+  color: #f0a500; /* hover opcional */
+}
+
+/* Logo */
+.img-contenedor {
+  width: 100px;
+  height: auto;
+}
+
+.img-contenedor img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+  .navbar {
+    font-size: 18px;
+  }
+  .img-contenedor {
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    font-size: 16px;
+    padding: 0.4rem 0.8rem;
+  }
+  .img-contenedor {
+    width: 70px;
+  }
+  .nav-link {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
 }

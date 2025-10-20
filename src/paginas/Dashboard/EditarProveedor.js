@@ -6,41 +6,41 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 
 
-export default function EditarCliente() {
-    const urlBase = `${process.env.REACT_APP_BACKEND_URL}/clientes`;
+export default function EditarProveedor() {
+    const urlBase = `${process.env.REACT_APP_BACKEND_URL}/proveedor`;
 
     let navegacion = useNavigate();
 
     const {id} = useParams();
 
-    const [cliente, setCliente]=useState({
+    const [proveedor, setProveedor]=useState({
         nombre:"",
         apellido:"",
         telefono:"",
         direccion:""
     })
     
-    const{nombre,apellido,telefono,direccion} = cliente
+    const{nombre,apellido,telefono,direccion} = proveedor
 
     useEffect(()=>{
-        cargarCliente();
+        cargarProveedor();
     },[])
 
-    const cargarCliente = async () => {
+    const cargarProveedor = async () => {
         const resultado = await axios.get(`${urlBase}/${id}`)
-        setCliente(resultado.data);
+        setProveedor(resultado.data);
     }
 
     const onInputChange = (e) => {
-        setCliente({...cliente,[e.target.name]: e.target.value})    
+        setProveedor({...proveedor,[e.target.name]: e.target.value})    
     }
 
     const onSubmit = async (e) =>{
         e.preventDefault();
         
-        await axios.put(`${urlBase}/${id}`, cliente);
+        await axios.put(`${urlBase}/${id}`, proveedor);
         //redirigimos a la pagina de inicio
-        navegacion('/clientes');
+        navegacion('/proveedores');
 
     }
 
@@ -50,7 +50,7 @@ export default function EditarCliente() {
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title text-center mb-4">EDITAR CLIENTE</h5>
+              <h5 className="card-title text-center mb-4">EDITAR PROVEEDOR</h5>
               <form onSubmit={(e)=> onSubmit(e)}>
                 <div className="mb-3">
                   <label htmlFor="nombre" className="form-label">
@@ -86,7 +86,7 @@ export default function EditarCliente() {
                 
                 <div className="mb-3">
                   <label htmlFor="telefono" className="form-label">
-                    Telefono
+                    Teléfono
                   </label>
                   <input
                     type="tel"
@@ -101,9 +101,9 @@ export default function EditarCliente() {
                   
                 </div>
 
-                <div className="mb-3">
+                 <div className="mb-3">
                   <label htmlFor="direccion" className="form-label">
-                    Direccion
+                    Dirección
                   </label>
                   <input
                     type="text"
@@ -116,6 +116,10 @@ export default function EditarCliente() {
                     required
                   />
                 </div>
+
+                
+
+                
 
                 
                 <button type="submit" className="btn btn-primary w-100">

@@ -1,42 +1,46 @@
-import axios from 'axios';
-import { Alert } from 'bootstrap';
-import React, { useState } from 'react';
-import 'react-calendar/dist/Calendar.css';
-import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import "react-calendar/dist/Calendar.css";
+import { useNavigate, useParams } from "react-router-dom";
 
+export default function EditarUsuario() {
+  const urlBase = `${process.env.REACT_APP_BACKEND_URL}/usuario`;
+  let navegacion = useNavigate();
 
+  const { id } = useParams();
 
+  const [usuario, setUsuario] = useState({
+    nombre: "",
+    dni: "",
+    direccion: "",
+    telefono: "",
+    email: "",
+    password:"",
+    rol: "",
+  });
 
-export default function CrearUsuario() {
+  const { nombre, dni, direccion, telefono,password, email, rol } = usuario;
 
+  useEffect(() => {
+    cargarUsuario();
+  }, []);
 
-    let navegacion = useNavigate();
+  const cargarUsuario = async () => {
+    const resultado = await axios.get(`${urlBase}/${id}`);
+    setUsuario(resultado.data);
+  };
 
-    const [usuario, setUsuario]=useState({
-        nombre:"",
-        dni:"",
-        direccion:"",
-        telefono:"",
-        email:"",
-        password:"",
-        rol:""
+  const onInputChange = (e) => {
+    setUsuario({ ...usuario, [e.target.name]: e.target.value });
+  };
 
-    })
-    
-    const{nombre,dni,direccion,telefono,email,password,rol} = usuario
+  const onSubmit = async (e) => {
+    e.preventDefault();
 
-    const onInputChange = (e) => {
-        setUsuario({...usuario,[e.target.name]: e.target.value})    
-    }
-
-    const onSubmit = async (e) =>{
-        e.preventDefault();
-        const urlBase = `${process.env.REACT_APP_BACKEND_URL}/usuario`;
-        await axios.post(urlBase,usuario);
-        //redirigimos a la pagina de inicio
-        navegacion('/usuario');
-
-    }
+    await axios.put(`${urlBase}/${id}`, usuario);
+    //redirigimos a la pagina de inicio
+    navegacion("/usuario");
+  };
 
   return (
     <div className="container mt-5">
@@ -44,7 +48,7 @@ export default function CrearUsuario() {
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h5 className="card-title text-center mb-4">NUEVO USUARIO</h5>
+              <h5 className="card-title text-center mb-4">EDITAR USUARIO</h5>
               <form onSubmit={(e)=> onSubmit(e)}>
                 <div className="mb-3">
                   <label htmlFor="nombre" className="form-label">
@@ -57,7 +61,7 @@ export default function CrearUsuario() {
                     name="nombre"
                     placeholder="Escriba su nombre completo"
                     value={nombre}
-                    onChange={(e)=> onInputChange(e)}
+                    onChange={(e) => onInputChange(e)}
                     required
                   />
                 </div>
@@ -72,13 +76,13 @@ export default function CrearUsuario() {
                     name="dni"
                     placeholder="Escriba su dni"
                     value={dni}
-                    onChange={(e)=> onInputChange(e)}
+                    onChange={(e) => onInputChange(e)}
                     required
                   />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="direccion" className="form-label">
-                    Dirección
+                    Direccion
                   </label>
                   <input
                     type="text"
@@ -87,13 +91,13 @@ export default function CrearUsuario() {
                     name="direccion"
                     placeholder="Escriba su direccion actual"
                     value={direccion}
-                    onChange={(e)=> onInputChange(e)}
+                    onChange={(e) => onInputChange(e)}
                     required
                   />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="telefono" className="form-label">
-                    Teléfono
+                    Telefono
                   </label>
                   <input
                     type="tel"
@@ -102,10 +106,9 @@ export default function CrearUsuario() {
                     name="telefono"
                     placeholder="Escriba su numero de telefono"
                     value={telefono}
-                    onChange={(e)=> onInputChange(e)}
+                    onChange={(e) => onInputChange(e)}
                     required
                   />
-                  
                 </div>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">
@@ -118,10 +121,9 @@ export default function CrearUsuario() {
                     name="email"
                     placeholder="Escriba su email"
                     value={email}
-                    onChange={(e)=> onInputChange(e)}
+                    onChange={(e) => onInputChange(e)}
                     required
                   />
-                  
                 </div>
                 <div className="mb-3">
                   <label htmlFor="password" className="form-label">
@@ -134,26 +136,24 @@ export default function CrearUsuario() {
                     name="password"
                     placeholder="Escriba su contraseña"
                     value={password}
-                    onChange={(e)=> onInputChange(e)}
+                    onChange={(e) => onInputChange(e)}
                     required
                   />
-                  
                 </div>
-                <div className='mb-3'>
-                    <select 
+                <div className="mb-3">
+                  <select
                     class="form-select"
-                    name="rol" 
+                    name="rol"
                     value={rol}
                     onChange={(e)=> onInputChange(e)}
-                    >
-                        <option selected>Seleccione rol de usuario</option>
-                        <option value="ADMIN">Administrador</option>
-                        <option value="USUARIO">Usuario</option>
-                        
-                    </select>
+                  >
+                    <option selected>Seleccione rol de usuario</option>
+                    <option value="ADMIN">Administrador</option>
+                    <option value="USUARIO">Usuario</option>
+                  </select>
                 </div>
                 <button type="submit" className="btn btn-primary w-100">
-                  Crear usuario
+                  Editar usuario
                 </button>
               </form>
             </div>
@@ -161,5 +161,5 @@ export default function CrearUsuario() {
         </div>
       </div>
     </div>
-  )
+  );
 }

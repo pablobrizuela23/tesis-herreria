@@ -1,9 +1,61 @@
-.card-contenedor .card {
-    max-width: 100%; /* Que se expanda en la columna */
-    min-height: 350px; /* Asegura altura uniforme */
-  }
-  .card-img-top {
-    height: 300px; /* Ajusta altura de la imagen */
-    object-fit: cover; /* Evita que se distorsione */
-  }
-  
+.testimonio-contenedor {
+    padding: 90px 0px 70px;
+}
+
+.testimonio-contenedor h2 {
+    padding-bottom: 60px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Cards */
+.card-contenedor {
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 350px;
+    margin-bottom: 30px; /* espacio entre filas */
+}
+
+.card-contenedor .card-img-top {
+    width: 100%;
+    aspect-ratio: 4/3;    /* fuerza proporción uniforme */
+    object-fit: cover;     /* llena contenedor sin distorsionar */
+}
+
+.card-contenedor .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card-contenedor p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #2e2f2f;
+    margin-top: 15px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .testimonio-contenedor h2 {
+        font-size: 1.8rem;
+    }
+    .card-contenedor .card-img-top {
+        aspect-ratio: auto;   /* deja que la imagen se adapte */
+        max-height: 250px;    /* limita altura para mobile */
+        object-fit: contain;  /* se ve completa sin recortes */
+    }
+    .card-contenedor p {
+        font-size: 0.85rem;
+    }
+}
+
+
