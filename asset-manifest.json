@@ -1,26 +1,36 @@
 {
   "files": {
-    "main.css": "/tesis-herreria/static/css/main.8c0c85b8.css",
-    "main.js": "/tesis-herreria/static/js/main.d99623f5.js",
+    "main.css": "/tesis-herreria/static/css/main.b7bc5da8.css",
+    "main.js": "/tesis-herreria/static/js/main.67c7d4fa.js",
+    "static/js/239.d28eacef.chunk.js": "/tesis-herreria/static/js/239.d28eacef.chunk.js",
+    "static/js/977.9b5b7444.chunk.js": "/tesis-herreria/static/js/977.9b5b7444.chunk.js",
+    "static/js/455.acfae95e.chunk.js": "/tesis-herreria/static/js/455.acfae95e.chunk.js",
     "static/media/puertas-asador.jpg": "/tesis-herreria/static/media/puertas-asador.3b9c397b8dec5aa8eea3.jpg",
     "static/media/background-dashboard.jpg": "/tesis-herreria/static/media/background-dashboard.bf9e66c39ec1dd655ffd.jpg",
     "static/media/background-seccion-acerca.jpg": "/tesis-herreria/static/media/background-seccion-acerca.03f27e0487dd00baacc3.jpg",
     "static/media/cerramientos-internos.jpg": "/tesis-herreria/static/media/cerramientos-internos.e59b3e4dddbc86455c90.jpg",
     "static/media/banner1.jpg": "/tesis-herreria/static/media/banner1.46f52967374394a5c262.jpg",
     "static/media/paneles-colgante.jpg": "/tesis-herreria/static/media/paneles-colgante.52a51f83544a1809d87b.jpg",
+    "static/media/fa-solid-900.woff2": "/tesis-herreria/static/media/fa-solid-900.8ae0d37556ff1e685de2.woff2",
+    "static/media/fa-brands-400.woff2": "/tesis-herreria/static/media/fa-brands-400.1c5c7716b05754cb4eab.woff2",
     "static/media/marta-lopez.jpg": "/tesis-herreria/static/media/marta-lopez.42e38bd33715f58a8555.jpg",
     "static/media/jason-ayers-testimonio.jpg": "/tesis-herreria/static/media/jason-ayers-testimonio.e1eee60bba678c5e9c51.jpg",
     "static/media/adolfo-bermudez-testimonio.jpg": "/tesis-herreria/static/media/adolfo-bermudez-testimonio.e873855cfbba24bfd7b4.jpg",
     "static/media/icono3.png": "/tesis-herreria/static/media/icono3.aa71e980610d279e1b75.png",
     "static/media/icono4.png": "/tesis-herreria/static/media/icono4.29dbd98dce8520d64b28.png",
     "static/media/icono-herreria.png": "/tesis-herreria/static/media/icono-herreria.adda0800c15d811328b1.png",
+    "static/media/fa-regular-400.woff2": "/tesis-herreria/static/media/fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
     "static/media/icono2.png": "/tesis-herreria/static/media/icono2.f65b8221341e4ca44a2d.png",
+    "static/media/fa-v4compatibility.woff2": "/tesis-herreria/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
     "index.html": "/tesis-herreria/index.html",
-    "main.8c0c85b8.css.map": "/tesis-herreria/static/css/main.8c0c85b8.css.map",
-    "main.d99623f5.js.map": "/tesis-herreria/static/js/main.d99623f5.js.map"
+    "main.b7bc5da8.css.map": "/tesis-herreria/static/css/main.b7bc5da8.css.map",
+    "main.67c7d4fa.js.map": "/tesis-herreria/static/js/main.67c7d4fa.js.map",
+    "239.d28eacef.chunk.js.map": "/tesis-herreria/static/js/239.d28eacef.chunk.js.map",
+    "977.9b5b7444.chunk.js.map": "/tesis-herreria/static/js/977.9b5b7444.chunk.js.map",
+    "455.acfae95e.chunk.js.map": "/tesis-herreria/static/js/455.acfae95e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c0c85b8.css",
-    "static/js/main.d99623f5.js"
+    "static/css/main.b7bc5da8.css",
+    "static/js/main.67c7d4fa.js"
   ]
 }
