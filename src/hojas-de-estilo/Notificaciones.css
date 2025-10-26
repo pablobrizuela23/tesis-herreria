@@ -1,0 +1,32 @@
+.notificaciones {
+  width: 300px;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(0, 123, 255, 0.1); /* azul transparente */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.notificacion-item {
+  background-color: rgba(0, 123, 255, 0.2); /* azul un poco más visible */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.notificacion-item p {
+  margin: 5px 0;
+}
+
+.notificacion-item button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.notificacion-item button:hover {
+  background-color: #0056b3;
+}

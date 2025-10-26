@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 60px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -17,11 +17,11 @@
 }
 
 .sidebar h3 {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   font-size: 1.4rem;      /* Ajuste del tamaño */
-  text-align: center;      /* Centrar texto */
+  text-align: left;      /* Centrar texto */
   width: 100%;
-  padding: 0 10px;         /* Espacio interno a los lados */
+  padding: 0;         /* Espacio interno a los lados */
   color: #f8c12c;          /* Dorado */
   word-wrap: break-word;   /* Que se divida si es muy largo */
 }
@@ -58,6 +58,66 @@
     transform: translateX(0);
   }
 }
+
+/* Contenedor del ícono con badge */
+.icono-noti-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -4px;
+}
+
+/* Badge rojo con número */
+.badge-noti {
+  position: absolute;
+  top: -8px;
+  right: 0px;
+  background-color: red;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 5px;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Link de notificación */
+.noti-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.usuario-logeado {
+  font-size: 0.95rem;
+  color: #b5b5b5;
+  
+  margin: 0px 0px 60px 0px;       /* espacio arriba y abajo */
+  padding-left: 15px;   /* mismo que los links */
+  width: 100%;
+}
+.btn-cerrar-sesion {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.btn-cerrar-sesion:hover {
+  background: #e03e3e;
+  
+}
+
 
 
 

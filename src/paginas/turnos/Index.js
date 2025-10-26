@@ -14,7 +14,9 @@ export default function Index() {
   useEffect(() => {
     const fetchTurnos = async () => {
       try {
-        const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/turno`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/turno`
+        );
         const turnos = res.data.map((t) => ({
           id: t.id,
           title: `${t.descripcion} - ${t.nombre}`, // o t.direccion, t.telefono...
@@ -40,6 +42,13 @@ export default function Index() {
         localizer={localizer}
         events={eventos}
         onSelectEvent={async (turno) => {
+          const rol = localStorage.getItem("rolUsuario"); // obtiene el rol guardado al logear
+
+          if (rol !== "ADMIN") {
+            alert("No tienes permisos para eliminar turnos");
+            return;
+          }
+
           if (window.confirm(`¿Eliminar el turno de ${turno.title}?`)) {
             try {
               await axios.delete(

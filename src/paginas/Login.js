@@ -1,25 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-  
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      console.log(email);
-      console.log(password);
-      
-      if(email=== "admin@herreria.com" && password === "1234"){
-          console.log(" Ingreso exitoso ");
-          navigate("/dashboard");
-        
-        }else{
-          alert("credenciales incorrectas");
-        }
-    };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const urlLogin = `${process.env.REACT_APP_BACKEND_URL}/api/auth/login`;
+    //const urlLogin = "http://localhost:8080/api/auth/login"
+
+    axios.post(urlLogin, { email, password })
+      .then(res => {
+        console.log("Login OK", res.data);
+
+        // Guardar usuario completo en localStorage
+        localStorage.setItem("usuarioLogueado", JSON.stringify(res.data));
+        // Guardar solo el rol si querés usarlo para mostrar/habilitar opciones
+        localStorage.setItem("rolUsuario", res.data.rol);
+
+        navigate("/dashboard");
+      })
+      .catch(err => {
+        console.error("Error en login", err);
+        alert("Credenciales incorrectas");
+      });
+  };
 
   return (
     <div className="container mt-5">
@@ -30,9 +39,7 @@ export default function Login() {
               <h5 className="card-title text-center mb-4">Inicio de Sesión</h5>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Correo Electrónico
-                  </label>
+                  <label htmlFor="email" className="form-label">Correo Electrónico</label>
                   <input
                     type="email"
                     className="form-control"
@@ -44,9 +51,7 @@ export default function Login() {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="password" className="form-label">
-                    Contraseña
-                  </label>
+                  <label htmlFor="password" className="form-label">Contraseña</label>
                   <input
                     type="password"
                     className="form-control"
@@ -57,14 +62,12 @@ export default function Login() {
                     required
                   />
                 </div>
-                <button type="submit" className="btn btn-primary w-100">
-                  Iniciar Sesión
-                </button>
+                <button type="submit" className="btn btn-primary w-100">Iniciar Sesión</button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
