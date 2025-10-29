@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "../paginas/Home";
 import Dashboard from "../paginas/Dashboard/Dashboard";
 import Login from "../paginas/Login";
@@ -18,7 +18,7 @@ import Notificaciones from "../paginas/Dashboard/Notificaciones";
 
 export default function AppRouter() {
   return (
-    <BrowserRouter basename="/tesis-herreria">
+    <HashRouter basename="/tesis-herreria">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -35,6 +35,6 @@ export default function AppRouter() {
         </Route>
         <Route path="/sacar-turno" element={<SacarTurnos />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
