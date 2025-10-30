@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tesis-herreria/static/css/main.b7bc5da8.css",
-    "main.js": "/tesis-herreria/static/js/main.2f325849.js",
+    "main.css": "/tesis-herreria/static/css/main.dce0f0ea.css",
+    "main.js": "/tesis-herreria/static/js/main.b3cdfc95.js",
     "static/js/239.d28eacef.chunk.js": "/tesis-herreria/static/js/239.d28eacef.chunk.js",
     "static/js/977.9b5b7444.chunk.js": "/tesis-herreria/static/js/977.9b5b7444.chunk.js",
     "static/js/455.acfae95e.chunk.js": "/tesis-herreria/static/js/455.acfae95e.chunk.js",
@@ -23,14 +23,14 @@
     "static/media/icono2.png": "/tesis-herreria/static/media/icono2.f65b8221341e4ca44a2d.png",
     "static/media/fa-v4compatibility.woff2": "/tesis-herreria/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
     "index.html": "/tesis-herreria/index.html",
-    "main.b7bc5da8.css.map": "/tesis-herreria/static/css/main.b7bc5da8.css.map",
-    "main.2f325849.js.map": "/tesis-herreria/static/js/main.2f325849.js.map",
+    "main.dce0f0ea.css.map": "/tesis-herreria/static/css/main.dce0f0ea.css.map",
+    "main.b3cdfc95.js.map": "/tesis-herreria/static/js/main.b3cdfc95.js.map",
     "239.d28eacef.chunk.js.map": "/tesis-herreria/static/js/239.d28eacef.chunk.js.map",
     "977.9b5b7444.chunk.js.map": "/tesis-herreria/static/js/977.9b5b7444.chunk.js.map",
     "455.acfae95e.chunk.js.map": "/tesis-herreria/static/js/455.acfae95e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7bc5da8.css",
-    "static/js/main.2f325849.js"
+    "static/css/main.dce0f0ea.css",
+    "static/js/main.b3cdfc95.js"
   ]
 }
