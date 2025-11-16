@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/tesis-herreria/static/css/main.dce0f0ea.css",
-    "main.js": "/tesis-herreria/static/js/main.64d37c4f.js",
+    "main.js": "/tesis-herreria/static/js/main.ca80d0b1.js",
     "static/js/239.d28eacef.chunk.js": "/tesis-herreria/static/js/239.d28eacef.chunk.js",
     "static/js/977.9b5b7444.chunk.js": "/tesis-herreria/static/js/977.9b5b7444.chunk.js",
     "static/js/455.acfae95e.chunk.js": "/tesis-herreria/static/js/455.acfae95e.chunk.js",
+    "static/media/video-herrecor.mp4": "/tesis-herreria/static/media/video-herrecor.ec081cb4f7d5e3bc2fbe.mp4",
     "static/media/puertas-asador.jpg": "/tesis-herreria/static/media/puertas-asador.3b9c397b8dec5aa8eea3.jpg",
     "static/media/background-dashboard.jpg": "/tesis-herreria/static/media/background-dashboard.bf9e66c39ec1dd655ffd.jpg",
     "static/media/background-seccion-acerca.jpg": "/tesis-herreria/static/media/background-seccion-acerca.03f27e0487dd00baacc3.jpg",
@@ -24,13 +25,13 @@
     "static/media/fa-v4compatibility.woff2": "/tesis-herreria/static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
     "index.html": "/tesis-herreria/index.html",
     "main.dce0f0ea.css.map": "/tesis-herreria/static/css/main.dce0f0ea.css.map",
-    "main.64d37c4f.js.map": "/tesis-herreria/static/js/main.64d37c4f.js.map",
+    "main.ca80d0b1.js.map": "/tesis-herreria/static/js/main.ca80d0b1.js.map",
     "239.d28eacef.chunk.js.map": "/tesis-herreria/static/js/239.d28eacef.chunk.js.map",
     "977.9b5b7444.chunk.js.map": "/tesis-herreria/static/js/977.9b5b7444.chunk.js.map",
     "455.acfae95e.chunk.js.map": "/tesis-herreria/static/js/455.acfae95e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dce0f0ea.css",
-    "static/js/main.64d37c4f.js"
+    "static/js/main.ca80d0b1.js"
   ]
 }
